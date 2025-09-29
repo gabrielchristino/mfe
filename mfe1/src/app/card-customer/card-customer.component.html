@@ -1,0 +1,17 @@
+<h2>Bem-vindo ao Micro-Frontend de Cartoes! (mfe1)</h2>
+<p>Este é um componente do MFE1 carregado dinamicamente pelo Host.</p>
+<hr>
+<ng-container *ngIf="!selectedCardId" #cardListContainer></ng-container>
+<div *ngIf="selectedCardId">
+  <h3>Cartão Selecionado (dentro do mfe1)</h3>
+  <p>
+    Você selecionou o cartão com ID: <strong>{{ selectedCardId }}</strong>
+  </p>
+  <ng-container *ngIf="!selectedDataId" #customerDataContainer></ng-container>
+  <div *ngIf="selectedDataId" style="margin-top: 1rem; border-top: 1px dashed #ccc; padding-top: 1rem;">
+    <h4>Dado do Cliente Selecionado (recebido no mfe1)</h4>
+    <p>
+      O ID do dado selecionado foi: <strong>{{ selectedDataId }}</strong>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h3>Customer Data (from mfe-cards)</h3>
+<p>ID recebido do componente pai: <strong>{{ cardId }}</strong></p>
+<div class="card-container">
+  @for(card of customerData; track card.id) {
+    <div class="card" (click)="onDataClick(card.id)">
+      <h4>{{ card.title }}</h4>
+      <p>{{ card.description }}</p>
+    </div>
+  }
+</div>

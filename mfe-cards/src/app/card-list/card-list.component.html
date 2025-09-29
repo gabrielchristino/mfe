@@ -1,0 +1,10 @@
+<h3>Componente de Cartões (de mfe-cards)</h3>
+<div class="card-container">
+  @for(card of cards; track card.id) {
+    <div class="card" (click)="onCardClick(card.id)">
+      <h4>{{ card.title }}</h4>
+      <p>{{ card.description }}</p>
+    </div>
+  }
+</div>
+
